@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wandertunes</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        select, button { margin: 10px 0; padding: 5px; }
+        #map { height: 400px; width: 100%; }
+        #playlist { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Wandertunes</h1>
+    <div id="map"></div>
+    <select id="mood">
+        <option value="">Select mood</option>
+        {% for mood in moods %}
+        <option value="{{ mood }}">{{ mood }}</option>
+        {% endfor %}
+    </select>
+    <select id="weather">
+        <option value="">Select weather</option>
+        {% for weather in weathers %}
+        <option value="{{ weather }}">{{ weather }}</option>
+        {% endfor %}
+    </select>
+    <button onclick="generatePlaylist()">Generate Playlist</button>
+    <div id="playlist"></div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
