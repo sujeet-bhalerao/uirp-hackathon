@@ -176,11 +176,12 @@ h1 .logo {
 
 .centered-content {
     text-align: center;
-    font-size: 0.8em; 
-    margin: 0 auto; 
+    font-size: 0.8em; /* This will make the text smaller, adjust as needed */
+    margin: 0 auto; /* Center the div itself */
+}
 
 .centered-content h2 {
-    font-size: 1.5em; 
+    font-size: 1.5em; /* Adjust the heading size separately if needed */
     margin: 0 auto;
 }
 
@@ -191,7 +192,7 @@ h1 .logo {
 
 .centered-content .playlist-item {
     margin: 10px auto;
-    max-width: 600px;
+    max-width: 600px; /* Limit the width to make it look better */
     text-align: center;
 }
 
@@ -229,6 +230,36 @@ h1 .logo {
     text-align: left;
 }
 
+.weather-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.weather-info img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Styles for weather date and time */
+.weather-time {
+    text-align: center;
+}
+
+.weather-time p {
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
 .playlist-item {
     margin-top: 10px;
 }
@@ -236,7 +267,7 @@ h1 .logo {
     display: none;
 }
 .btn-primary {
-    background-color: #3498db; 
+    background-color: #3498db; /* Blue background color */
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -249,7 +280,7 @@ h1 .logo {
     transition: background-color 0.3s ease;
 }
 .btn-primary:hover {
-    background-color: #2980b9; 
+    background-color: #2980b9; /* Darker blue on hover */
 }
 .form-control {
     margin: 10px 0;

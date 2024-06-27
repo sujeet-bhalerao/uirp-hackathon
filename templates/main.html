@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .custom-font {
+            font-family: 'Satisfy', cursive;
+            font-size: 36px;
+        }
+        .custom-body-font {
+            font-family: 'Satisfy', cursive;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="logo">
@@ -17,12 +27,13 @@
     <div id="map-container">
         <div id="map"></div>
     </div>
+    <!-- Add this after the map container in main.html -->
     <div class="recommendation-toggle">
         <label>
             <input type="radio" name="recoType" value="location" checked> Location-based
         </label>
         <label>
-            <input type="radio" name="recoType" value="gpt"> GPT-based
+            <input type="radio" name="recoType" value="gpt"> Vibes
         </label>
     </div>
 

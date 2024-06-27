@@ -21,6 +21,7 @@ function initMap() {
 }
 
 function getWeatherAndPlaylist() {
+    // Get weather
     fetch('/get_weather', {
         method: 'POST',
         headers: {
@@ -31,13 +32,18 @@ function getWeatherAndPlaylist() {
     .then(response => response.json())
     .then(weatherData => {
         document.getElementById('weather').innerHTML = `
-            <h2>${weatherData.city}, ${weatherData.country}</h2>
-            <p>
-                <img src="http://openweathermap.org/img/wn/${weatherData.icon}@2x.png" alt="${weatherData.description}">
-                ${weatherData.temp}°C, ${weatherData.description}
-            </p>
-            <p>Date: ${weatherData.date}</p>
-            <p>Local Time: ${weatherData.time}</p>
+            <div class="weather-info">
+                <h2>${weatherData.city}, ${weatherData.country}</h2>
+                <p>
+                    <img src="http://openweathermap.org/img/wn/${weatherData.icon}@2x.png"
+                         alt="${weatherData.description}">
+                    ${weatherData.temp}°C, ${weatherData.description}
+                </p>
+            </div>
+            <div class="weather-time">
+                <p>Date: ${weatherData.date}</p>
+                <p>Local Time: ${weatherData.time}</p>
+            </div>
         `;
         return weatherData;
     })
@@ -69,36 +75,24 @@ function getWeatherAndPlaylist() {
             <h2>Your Playlist for ${data.city}, ${data.country} (${data.weather}):</h2>
         `;
 
+        // Display messages if any
         if (data.messages && data.messages.length > 0) {
-            const messagesDiv = document.createElement('div');
-            messagesDiv.classList.add('messages');
+            playlistDiv.innerHTML += '<div class="messages">';
             data.messages.forEach(message => {
-                const messageP = document.createElement('p');
-                messageP.textContent = message;
-                messagesDiv.appendChild(messageP);
+                playlistDiv.innerHTML += `<p>${message}</p>`;
             });
-            playlistDiv.appendChild(messagesDiv);
+            playlistDiv.innerHTML += '</div>';
         }
 
-
-        const playlistItemsContainer = document.createElement('div');
-        playlistItemsContainer.classList.add('playlist-items-container');
-    
         data.playlist.forEach(song => {
-            const songDiv = document.createElement('div');
-            songDiv.classList.add('playlist-item');
-            songDiv.innerHTML = `
-                <h3>${song.name} by ${song.artist}</h3>
-                <p><em>Reason: ${song.reason}</em></p>
-                ${song.preview_url ? `<audio controls src="${song.preview_url}"></audio>` : '<p>(Preview not available)</p>'}
+            playlistDiv.innerHTML += `
+                <div class="playlist-item">
+                    <h3>${song.name} by ${song.artist}</h3>
+                    ${song.preview_url ? `<audio controls src="${song.preview_url}"></audio>` : '<p>(Preview not available)</p>'}
+                </div>
             `;
-            playlistItemsContainer.appendChild(songDiv);
         });
-
-    
-        playlistDiv.appendChild(playlistItemsContainer);
     })
-
 
 
     .catch((error) => {
