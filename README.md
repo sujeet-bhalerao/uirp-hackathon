@@ -22,9 +22,6 @@ The project seamlessly integrates data from multiple sources:
 ```
 git clone https://github.com/sujeet-bhalerao/uirp-hackathon.git
 ```
-```
-cd weather-music-playlist
-```
 
 2. Install the required packages:
 
