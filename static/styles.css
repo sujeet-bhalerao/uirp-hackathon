@@ -1,0 +1,263 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #add8e6;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.logo {
+    font-size: 3em;
+    color: #2980b9;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+h1 {
+    font-size: 2em;
+    color: #2980b9;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #2980b9;
+    margin-bottom: 30px;
+}
+.features {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.feature {
+    flex: 0 1 30%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #f8f9fa;
+    border-radius: 0px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+.feature i {
+    font-size: 2em;
+    color: #2980b9;
+    margin-right: 10px;
+}
+.btn-start {
+    display: inline-block;
+    margin-top: 30px;
+    width: 90%;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.button-container {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.custom-font {
+    font-family: 'Satisfy', cursive;
+    font-size: 36px;
+}
+.custom-body-font {
+    font-family: 'Satisfy', cursive;
+    font-size: 20px;
+}
+
+.custom-landing-font {
+    font-family: 'Satisfy', cursive;
+    font-size: 36px;
+}
+
+.btn.btn-primary.btn-start.custom-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: auto;
+}
+
+.btn.btn-primary.btn-start.custom-btn:hover {
+    background-color: #2980b9;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 .logo {
+    font-family: 'Lobster', cursive;
+}
+
+.logo {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#map-container {
+    width: 100%;
+    height: 500px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.recommendation-toggle {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form-control {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.btn {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.spinner {
+    display: block;
+    margin: 20px auto;
+}
+
+#weather {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#playlist {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.playlist-item {
+    margin: 10px 0;
+}
+
+
+.centered-content {
+    text-align: center;
+    font-size: 0.8em; 
+    margin: 0 auto; 
+
+.centered-content h2 {
+    font-size: 1.5em; 
+    margin: 0 auto;
+}
+
+.centered-content .messages {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.centered-content .playlist-item {
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.centered-content audio {
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.btn-start:hover {
+    background-color: #2980b9;
+}
+#map-container {
+    background-color: #add8e6;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+.playlist-item {
+    margin-top: 10px;
+}
+#weather, #playlist {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.playlist-item {
+    margin-top: 10px;
+}
+.spinner {
+    display: none;
+}
+.btn-primary {
+    background-color: #3498db; 
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 12px;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #2980b9; 
+}
+.form-control {
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.spinner-border {
+    display: none;

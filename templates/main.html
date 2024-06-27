@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main - Wandertunes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo">
+        <i class="fas fa-music"></i> <span class="custom-font">Wandertunes</span>
+    </div>
+    <p class="custom-body-font">Select a location on the map and scroll down to see the results.</p>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <div class="recommendation-toggle">
+        <label>
+            <input type="radio" name="recoType" value="location" checked> Location-based
+        </label>
+        <label>
+            <input type="radio" name="recoType" value="gpt"> GPT-based
+        </label>
+    </div>
+
+    <input type="text" id="musicPreference" class="form-control" placeholder="Enter music preference (e.g., danceable, slow, specific topic)">
+    <div class="spinner-border text-primary spinner" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div id="weather"></div>
+    <div id="playlist"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

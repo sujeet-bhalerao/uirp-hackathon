@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro - Wandertunes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <i class="fas fa-music"></i> <span class="custom-landing-font">Wandertunes</span>
+        </div>
+        <p>Discover music that matches your mood and the weather wherever you go. Wandertunes helps you find the perfect soundtrack for your adventures.</p>
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-sun"></i>
+                <strong>Weather-Based</strong>
+                <p>Get recommendations based on current weather conditions.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-heart"></i>
+                <strong>Emotion-Driven</strong>
+                <p>Find music that resonates with your current mood.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-map-marker-alt"></i>
+                <strong>Location-Aware</strong>
+                <p>Music suggestions tailored to your geographical location.</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <a href="/main" class="btn btn-primary btn-start custom-btn">Get Started</a>
+        </div>
+
+    </div>
+</body>
+</html>
