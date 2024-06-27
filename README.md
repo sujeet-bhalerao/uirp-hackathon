@@ -1,25 +1,51 @@
-This project develops a customized Spotify Recommender system that leverages user location, current weather conditions, and the user's emotional state to recommend songs tailored to the user's environment and mood.
+
+# Wandertunes
+Welcome to the Wandertunes, a location and vibes-based music playlist generator! This project is designed to create a music playlist based on your current location, mood and weather conditions. It uses data from various APIs to provide a personalized music experience.
+
+### Data Integration
+The project seamlessly integrates data from multiple sources:
+
+- Weather Data: Uses Open-Meteo API to fetch current weather conditions.
+- Location Data: Uses BigDataCloud API for reverse geocoding to get city and country information.
+- Music Data: Uses Spotify's API for finding and recommending tracks and creating playlists.
+- GPT-3 Integration: Uses OpenAI's GPT-3 to provide genre recommendations based on weather, date, and user input.
 
 
-Overview:
+### Features
+- Location-Based Recommendations: Finds artists from your chosen city/country and suggests their popular tracks.
+- Vibes-Based GPT-3 Enhanced Recommendations: Generates playlists based on current weather conditions. Uses GPT-3 to recommend genres based on weather, date, and user input.
+- Popular Tracks Fallback: Fills the playlist with popular tracks if enough recommendations are not found.
 
-The system utilizes data from various APIs to provide a personalized song recommendation experience:
+### Installation
+1. Clone the repository:
 
-    Weather Data: Retrieved from the OpenWeather API (https://openweathermap.org/api) to obtain the current weather conditions based on the user's location.
-  
-    Spotify Data: Utilizes the Spotify API (https://developer.spotify.com/documentation/web-api) to fetch music recommendations and information about songs.
-  
-    Location Services: Integrates Google API (https://developers.google.com/maps/documentation/javascript) for geolocation services to pinpoint the user's location accurately.
+```
+git clone https://github.com/sujeet-bhalerao/uirp-hackathon.git
+```
+```
+cd weather-music-playlist
+```
 
+2. Install the required packages:
 
-Functionality:
+```
+pip install -r requirements.txt
+```
 
-  Upon user input regarding their location and mood, the system:
+3. Set up environment variables for API keys:
 
-    Fetches Weather Information: Retrieves real-time weather data using the OpenWeather API based on the user-provided location.
-  
-    Determines User Mood: Allows the user to input their current emotional state or mood.
-  
-    Generates Song Recommendations: Combines weather data, mood input, and Spotify's music recommendation capabilities to suggest songs that match the user's context.
-  
-    User Interface: Provides a user-friendly interface where users can input their location and mood, and receive personalized song recommendations along with detailed weather information.
+```
+export SPOTIFY_CLIENT_ID='your-spotify-client-id'
+export SPOTIFY_CLIENT_SECRET='your-spotify-client-secret'
+export OPENAI_API_KEY='your-openai-api-key'
+```
+
+4. Run the Flask app:
+```
+flask run
+```
+
+### Usage
+- Landing Page: Navigate to the root URL to access the landing page.
+- Main Page: Select a location on the map and scroll down to see the selected location, the weather, and the recommended playlist. The user can choose between location based playlists or vibes based playlists, and can optionally add input in a text box to further refine results.
+
