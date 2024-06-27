@@ -5,10 +5,10 @@ Welcome to the Wandertunes, a location and vibes-based music playlist generator!
 ### Data Integration
 The project seamlessly integrates data from multiple sources:
 
-- Weather Data: Uses Open-Meteo API to fetch current weather conditions.
-- Location Data: Uses BigDataCloud API for reverse geocoding to get city and country information.
-- Music Data: Uses Spotify's API for finding and recommending tracks and creating playlists.
-- GPT-3 Integration: Uses OpenAI's GPT-3 to provide genre recommendations based on weather, date, and user input.
+- **Weather Data**: Uses [Open-Meteo API](https://open-meteo.com/en/docs) to fetch current weather conditions.
+- **Location Data**: Uses [BigDataCloud API](https://www.bigdatacloud.com/free-api/free-reverse-geocode-to-city-api) for reverse geocoding to get city and country information.
+- **Music Data**: Uses [Spotify's API](https://developer.spotify.com/documentation/web-api) for finding and recommending tracks and creating playlists.
+- **GPT-3 Integration**: Uses [OpenAI's GPT-3](https://platform.openai.com/docs/api-reference) to provide genre recommendations based on weather, date, and user input.
 
 
 ### Features
@@ -42,7 +42,8 @@ export OPENAI_API_KEY='your-openai-api-key'
 
 4. Run the Flask app:
 ```
-flask run
+python app_fuzz.py
+
 ```
 
 ### Usage
