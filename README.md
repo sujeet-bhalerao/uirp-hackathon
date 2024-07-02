@@ -1,6 +1,12 @@
 
 # Wandertunes
+
+#### Team Members: Alec Thompson, Sagar Regmi, Omoyeni Femi-Saliu, Sujeet Bhalerao
+
+
 Welcome to the Wandertunes, a location and vibes-based music playlist generator! This project is designed to create a music playlist based on your current location, mood and weather conditions. It uses data from various APIs to provide a personalized music experience.
+
+This project placed 2nd and won the "Notable Innovation" award at the [2024 University of Illinois Research Park Hackathon](https://github.com/uirphack/2024).
 
 ### Data Integration
 The project seamlessly integrates data from multiple sources:
